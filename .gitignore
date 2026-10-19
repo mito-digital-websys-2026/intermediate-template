@@ -1,0 +1,27 @@
+# Node / Next.js
+node_modules/
+.next/
+out/
+npm-debug.log*
+
+# Python / Django
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+db.sqlite3
+
+# 環境変数
+.env
+.env.local
+
+# OS / エディタ
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+
+# MySQL永続化データ（docker-composeのvolumeで管理するため追跡しない）
+mysql-data/

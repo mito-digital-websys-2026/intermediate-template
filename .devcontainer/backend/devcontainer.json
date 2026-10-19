@@ -1,0 +1,22 @@
+{
+  "name": "intermediate (backend)",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "backend",
+  "runServices": ["frontend", "backend", "db"],
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "none",
+
+  "forwardPorts": [8000, 3306],
+  "portsAttributes": {
+    "8000": { "label": "Django (backend)" },
+    "3306": { "label": "MySQL" }
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python", "ms-python.vscode-pylance"]
+    }
+  },
+
+  "postCreateCommand": "pip install --no-cache-dir -r backend/requirements.txt"
+}
